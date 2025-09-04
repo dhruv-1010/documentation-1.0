@@ -103,6 +103,11 @@ keytool -list -v -keystore ~/.android/debug.keystore -alias androiddebugkey -sto
 
 # Generate release SHA-1 (for production)
 keytool -list -v -keystore your-release-key.keystore -alias your-key-alias
+
+# Another method Generate local build SHA-1 for local development (useful for multiple version)
+cd android 
+./gradlew signingreport
+
 ```
 
 **Steps to add SHA-1 keys to Firebase**:
